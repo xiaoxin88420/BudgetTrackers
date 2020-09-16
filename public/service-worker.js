@@ -1,13 +1,14 @@
 
 self.addEventListener('install', event => {
   event.waitUntil(
-    caches.open('inNout-cache-v1').then(cache => {
+    caches.open('budget-cache-v1').then(cache => {
       console.log('Opened cache')
       return cache.addAll([
         '/',
         '/index.html',
         '/manifest.json',
         '/index.js',
+        '/db.js',
         '/style.css',
         '/icons/icon-192x192.png',
         '/icons/icon-512x512.png'
